@@ -1,0 +1,89 @@
+:root {
+    --primario: #71b100;
+    --secundario: #e08709;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}   
+
+h1,h2,h3,h4{
+    font-weight: 300;
+}
+
+.bg-success {
+    background-color: #71b100!important;
+}
+
+@media(min-width: 768px) {
+    .barra.bg-success{
+        background-color: transparent!important;
+    }
+    .header {
+        position: relative;
+    }
+    .header .barra { 
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+    }
+}
+.navbar-brand{
+   font-size: 2rem; 
+   font-size: 300;
+}
+.navbar-brand span {
+    font-weight: 900;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    text-transform: uppercase;
+    color: #ffffff;
+}
+/*Dropdown*/
+.dropdown-menu{
+    background-color: #71b100;
+}    
+
+.dropdown-menu .dropdown-item{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background-color: #e08709;
+}
+
+.carousel-caption h3{
+    font-size: 2.4rem;
+}
+ 
+.bloque-info p{
+    font-size:  1.4rem;
+}
+
+.btn-warning{
+    background-color: #e08709;
+    color: #ffffff;
+    border-color: #e08709;
+    font-weight: 700;
+}
+
+/* Nosotros */
+.sobre-nosotros h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/*Anuncios*/
+.anuncios .card {
+    margin-bottom: 2rem;
+}
+
+.card-precio{
+    font-size: 1.1rem;
+    color: #71b100;
+}
+
+.card-descripcion img{
+    margin-right: .5rem;
+}
