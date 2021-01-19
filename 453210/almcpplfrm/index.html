@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+
+    <title>Dictamen status Alarma</title>
+</head>
+
+<body>
+
+    <!--<section class="get_in_touch">
+        <h1 class="title">Checklist</h1>
+        
+        <div class="container" id="container">
+          <div class="contact-form row">
+           
+            <div class="field_wrapper">
+                <div>
+                    <input type="text" name="field_name[]" value=""/>
+                    <a href="javascript:void(0);" class="add_button" title="Add field" type="button"><i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        
+            
+          </div>
+          <div style="text-align: center">
+            
+            <button onclick="tamperForm()" value="tamper" id="btn">tamper</button>
+            
+            <button onClick="sensorForm()"  value="Sensor" id="btn">sensor</button>
+            
+            <button value="Contenido" id="btn">contenido</button>
+            
+            <button id="eliminar" onClick="sensorForm()"  onclick="eliminar()">eliminar</button>
+          </div>
+        </div>
+        <br>
+      </section>-->
+
+    <section class="get_in_touch">
+        <h1 class="title">Dictamen status Alarma</h1>
+<form id="form1"  name="form1" method="post"  >
+        <div class="container" id="container">
+            <div class="contact-form row">
+
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="phone" class="input-text">
+                    <label for="phone" class="label">Contact number</label>
+                </div>
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="name" class="input-text">
+                    <label for="name" class="label">Nombre</label>
+                </div>
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text">
+                   <label for="name" class="label">Ubicacion</label>
+                </div>
+
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text" >
+                    <label for="name" class="label">Alarma</label>
+                </div>
+
+                
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text" >
+                    <label for="name" class="label">Panel</label>
+                </div>
+                                
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text">
+                    <label for="name" class="label">Marca</label>
+                </div>
+                
+                                
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text">
+                    <label for="name" class="label">Modelo</label>
+                </div>
+
+
+                                
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text" placeholder=>
+                    <label for="name" class="label">Programacion</label>
+                </div>
+
+                                
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text" placeholder=>
+                    <label for="name" class="label">Zonas</label>
+                </div>
+
+                                
+                <div class="form-field col-lg-6">
+                    <input type="text" name="" id="otro" class="input-text" placeholder= >
+                    <label for="name" class="label">Tipo</label>
+                </div>
+                
+                <div class="form-field ">
+                    <input type="text" name="" id="otro" class="input-text" placeholder= >
+                    <label for="name" class="label">Descripcion</label>
+                </div>
+            
+                
+               <!-- 
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> 
+
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> 
+
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> 
+
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Requerida</label> </div> 
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Rendimiento</label> </div> 
+
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Antimascotas</label> </div> 
+
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> 
+
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> 
+
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Status</label> </div> 
+
+                
+                <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Observaciones</label> </div> 
+
+            -->
+            </div>
+            
+            <br>
+            <br>
+            
+            <div class="field_wrapper">
+            </div>
+            
+            <div style="text-align: center">
+                <h2>Sensores</h2>
+                <br>
+                <a href="javascript:void(0);" class="tamper btn btn-primary" title="Add field" type="button">Movimiento</a>
+                <a href="javascript:void(0);" class="Magnetico btn btn-primary" title="Add field" type="button">Puerta o Ventana</a>
+
+                <a href="javascript:void(0);" class="impacto btn btn-primary" title="Add field" type="button">Impacto</a>
+                <a href="javascript:void(0);" class="ruido btn btn-primary" title="Add field" type="button">Ruido</a>
+                <a href="javascript:void(0);" class="cristal btn btn-primary" title="Add field" type="button">Cristal</a>
+                <a href="javascript:void(0);" class="humo btn btn-primary" title="Add field" type="button">Humo</a>
+                <a href="javascript:void(0);" class="panico btn btn-primary" title="Add field" type="button">Activadores de panico</a>
+                <br>
+                <br>
+                <a href="javascript:void(0);" class="perimetrales btn btn-primary" title="Add field" type="button">Perimetrales</a>
+
+                <a href="javascript:void(0);" class="inundacion btn btn-primary" title="Add field" type="button">Inundacion</a>
+
+                <a href="javascript:void(0);" class="sismico btn btn-primary" title="Add field" type="button">Sismico</a>
+                
+                <a href="javascript:void(0);" class="comunicacion btn btn-danger" title="Add field" type="button">comunicacion</a>
+
+                <a href="javascript:void(0);" class="baterias btn btn-danger" title="Add field" 
+                type="button">Baterias</a>
+                
+                <a href="javascript:void(0);" class="riesgo btn btn-danger" title="Add field" type="button">Riesgo inminente</a>
+                
+                <a href="javascript:void(0);" class="protocolo btn btn-danger" title="Add field" type="button">Protocolo</a>
+
+
+
+            </div>
+
+            <br>
+                
+            <button value="Enviar" class="btn btn-success"/><a href="https://solucionesdsi.com/directorio/renvio.html">Enviar</a></button>
+        </div>
+    
+    </form>
+        
+    </section>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var maxField = 100; //Input fields increment limitation
+            var addButton = $('.Magnetico'); //Add button selector
+            var wrapper = $('.field_wrapper'); //Input field wrapper
+            
+           /* var fieldHTML = '<div> <h3>Sensores</h3> <input type="text" name="field_name[]" value=""/><input type="text" name="field_name[]" value=""/><input type="text" name="field_name[]" value=""/><a href="javascript:void(0);" class="remove_button"><button>Eliminar</button></a></div> '; */ //New input field html 
+
+          var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Puerta</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Status</label> </div> </div>  </form> <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+            var x = 1; //Initial field counter is 1
+
+            //Once add button is clicked
+            $(addButton).click(function () {
+                //Check maximum number of input fields
+                if (x < maxField) {
+                    x++; //Increment field counter
+                    $(wrapper).append(fieldHTML); //Add field html
+                }
+            });
+
+            //Once remove button is clicked
+            $(wrapper).on('click', '.remove_button', function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+        });
+
+        $(document).ready(function () {
+            var maxField = 100; //Input fields increment limitation
+            var addButton = $('.tamper'); //Add button selector
+            var wrapper = $('.field_wrapper'); //Input field wrapper
+          
+            var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor de Movimiento</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Requerida</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Rendimiento</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Antimascotas</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Status</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div> </form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a></div></div>'; //New input field html 
+            var x = 1; //Initial field counter is 1
+            
+            //New input field html 
+            var x = 1; //Initial field counter is 1
+
+            //Once add button is clicked
+            $(addButton).click(function () {
+                //Check maximum number of input fields
+                if (x < maxField) {
+                    x++; //Increment field counter
+                    $(wrapper).append(fieldHTML); //Add field html
+                }
+            });
+
+            //Once remove button is clicked
+            $(wrapper).on('click', '.remove_button', function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+        });
+
+
+//impacto 
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.impacto'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor De Impacto</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Requerida</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Rendimiento</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Status</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a></div>  </div>'; //New input field html 
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//ruido
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.ruido'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor De Ruido</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Frecuencias</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Requerida</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Rendimiento</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form> <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//cristal
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.cristal'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor De Ruptura De Cristal</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Frecuencias</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Requerida</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Rendimiento</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a></div></div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.humo'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor De Humo</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Requerida</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Cobertura Rendimiento</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form> <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a>   </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//panuico
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.panico'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Activadores de panico</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Activador</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//perimetrales
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.perimetrales'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor Perimetral</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Activador</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.inundacion'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor De Inundacion</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Activador</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Nivel</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//sismisco
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.sismico'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Sensor Sismico</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Ubicacion</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Zona</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Activador</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Grados R</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Eol</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">RNA/NC</label> </div> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//comunicacion
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.comunicacion'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Comunicacion</h2> <div class="contact-form row"> <div class="form-field col-lg-6"> <input type="text" name=""  class="input-text" placeholder= > <label for="name" class="label">Central</label> </div><div class="form-field col-lg-6"> <input type="text" name="" id="otro" class="input-text" placeholder= > <label for="name" class="label">Comunicador</label> </div>   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Funcionamiento del metodo de comunicacion</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Comunicador principal o de respaldo</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Estatus</label> </div>  <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//baterias
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.baterias'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+  
+  var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Bateria</h2> <div class="contact-form row">   <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Marca</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Modelo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Tipo</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Voltaje</label> </div>  <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Caducidad</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Estado fisico</label> </div> <div class="form-field col-lg-6"> <input type="text" name="" id="" class="input-text" placeholder= > <label for="name" class="label">Resultado Prueba rendimiento</label> </div><div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a></div></div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+//riesgo
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.riesgo'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+  
+  var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Riesgo</h2> <div class="contact-form row">   <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form>  <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a></div></div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+
+//protocolo 
+$(document).ready(function () {
+    var maxField = 100; //Input fields increment limitation
+    var addButton = $('.protocolo'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+  
+    var fieldHTML = '<div class="container" id="container" >  <hr size="8px" color="black"/><form id="form1"  name="form1" method="post"  > <h2 style="text-align: center">Protocolo</h2> <div class="contact-form row"> <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Protocolo</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div><div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label">Observaciones</label><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></div> </form> </div></form> <a href="javascript:void(0);" class="remove_button"><button type="button" class="btn btn-danger">Eliminar</button></a> </div> </div>'; //New input field html 
+
+    var x = 1; //Initial field counter is 1
+    
+    //New input field html 
+    var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function () {
+        //Check maximum number of input fields
+        if (x < maxField) {
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function (e) {
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+
+    </script>
+</body>
+
+</html>

@@ -28,7 +28,7 @@ getRandomUser();
 //Double eveyones money
 function doubleMoney(){
     data = data.map((user) => {
-        return {...user, money:user.money * 2};
+        return {...user, money: user.money * 2};
     });
     updateDOM();
 }
@@ -91,3 +91,4 @@ doubleBtn.addEventListener('click',doubleMoney);
 sortBtn.addEventListener('click',sortByRichest);
 showMillionariesBtn.addEventListener('click',showMillionaries);
 calculateWealthBtn.addEventListener('click', calculateWealth);
+
