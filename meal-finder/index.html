@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/18da6f245d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
     <title>Meal finder</title>
 </head>
 <body>
-    <div class="contaainer">
+    <div class="container">
         <h1>Meal Finder</h1>
         <div class="flex">
-            <form action="" class="flex"></form>
+            <form action="" class="flex" id="submit">
+                <input type="text" name="" id="search" placeholder="Search for meals or keywords">
+
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="random-btn" id="random">
+                <i class="fas fa-random"></i>
+            </button>
         </div>
+
+        <div id="result-heading"></div>
+        <div id="meals" class="meals"></div>
+        <div id="single-meal"></div>
     </div>
 </body>
+
+<script src="app.js"></script>
 </html>
